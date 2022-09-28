@@ -15,9 +15,9 @@ const Home = () => {
     }, [])
 
     return (
-        <div>
-            <div className='row container'>
-                <div className="left__side col-md-8 row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4">
+        <div className='home__container'>
+            <div className='row ms-0'>
+                <div className="left__side col-md-8 row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 mt-0 bg-secondary bg-opacity-10">
                     {
                         gymdatas.map(data => <SingleData
                             data={data}

@@ -17,6 +17,7 @@ const SingleData = ({ data }) => {
                             <p className="card-text text-secondary">{about ? about.slice(0, 70) + "..." : "data not found"}</p>
                             <p className='age'>For age: <span className='fw-semibold'>{age}-25</span></p>
                             <p>Time required : <span className='fw-semibold'>{time}s</span> </p>
+                            <button className='btn btn-primary w-100'>Add to list</button>
                         </div>
                     </div>
                 </div>

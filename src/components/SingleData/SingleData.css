@@ -1,7 +1,18 @@
-.card img{
-    height: 150px;
+.card img {
+  height: 150px;
 }
 
-.age{
-    margin-bottom: 0;
+.age {
+  margin-bottom: 0;
+}
+
+.right__side {
+  background: #fff;
+}
+
+
+@media screen and (max-width:768px) {
+    .left__side {
+        margin: auto;
+    }
 }
