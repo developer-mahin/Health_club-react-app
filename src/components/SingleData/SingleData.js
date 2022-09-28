@@ -1,5 +1,7 @@
 import React from 'react';
-import './SingleData.css'
+import './SingleData.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const SingleData = ({ data }) => {
     const { exerciseMaterial, about, picture, age, time } = data;
@@ -17,7 +19,7 @@ const SingleData = ({ data }) => {
                             <p className="card-text text-secondary">{about ? about.slice(0, 70) + "..." : "data not found"}</p>
                             <p className='age'>For age: <span className='fw-semibold'>{age}-25</span></p>
                             <p>Time required : <span className='fw-semibold'>{time}s</span> </p>
-                            <button className='btn btn-primary w-100'>Add to list</button>
+                            <button className='btn btn-primary w-100'>Add to list <FontAwesomeIcon icon={faPlus} /></button>
                         </div>
                     </div>
                 </div>
