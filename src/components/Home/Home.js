@@ -30,7 +30,7 @@ const Home = () => {
                         ></SingleData>)
                     }
                 </div>
-                <div className="right__side col-md-4 bg-white ms-0 ms-md-4">
+                <div className="right__side col-md-4 bg-white ms-0 ms-md-4 p-3 rounded">
                     <RightContainer></RightContainer>
                 </div>
             </div>

@@ -12,7 +12,7 @@ const SingleData = ({ data }) => {
             
             <div className=''>
                 <div className="col">
-                    <div className="card">
+                    <div className="card data__info__card shadow">
                         <img src={picture} className="card-img-top img-fluid" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">{exerciseMaterial}</h5>
