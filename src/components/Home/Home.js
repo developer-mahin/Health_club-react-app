@@ -3,6 +3,8 @@ import RightContainer from '../RightContainer/RightContainer';
 import SingleData from '../SingleData/SingleData';
 import Nav from '../Nav/Nav';
 import './Home.css'
+import Questions from '../Questions/Questions';
+import Footer from '../Footer/Footer';
 
 
 const Home = () => {
@@ -33,6 +35,12 @@ const Home = () => {
                 <div className="right__side col-md-4 bg-white ms-0 ms-md-4 p-3 rounded">
                     <RightContainer></RightContainer>
                 </div>
+            </div>
+            <div className='mt-4'>
+                <Questions></Questions>
+            </div>
+            <div>
+                <Footer></Footer>
             </div>
         </div>
     );

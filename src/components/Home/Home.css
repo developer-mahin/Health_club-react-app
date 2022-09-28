@@ -8,9 +8,13 @@
     padding: 0px 0px;
   }
 
-  @media screen and (max-width: 768px) {
-    .left__side {
-      margin: auto;
-    }
+  .left__side {
+    margin: auto;
+  }
+
+  .right__side{
+    width: 100%;
+    margin-left: 0px !important;
+    margin-top: 30px;
   }
 }
