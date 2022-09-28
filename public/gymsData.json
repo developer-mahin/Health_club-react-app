@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "63347b77e0997d7becd8c0e2",
+    "picture": "https://images.unsplash.com/photo-1554344728-77cf90d9ed26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    "age": 25,
+    "about": "Being physically active can improve your brain health, help manage weight, reduce the risk of disease, strengthen bones and muscles, and improve your ability to do everyday activities.\r\n",
+    "time": 32,
+    "exerciseMaterial": "Fitness"
+  },
+  {
+    "_id": "63347b77b847e5ff31a6d26d",
+    "picture": "https://media.istockphoto.com/photos/adjustable-metallic-dumbbell-picture-id466709486?s=612x612",
+    "age": 24,
+    "about": "Weight lifting with dumbbells lowers your risk of heart attack, stroke, and cardiovascular disease. Since strength training builds lean muscle mass, it helps you burn fat. Better sleep. Using dumbbells in the gym can lead to improved shut-eye.\r\n",
+    "time": 33,
+    "exerciseMaterial": "Dumbbells"
+  },
+  {
+    "_id": "63347b773702d00c8e8a6d3f",
+    "picture": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
+    "age": 22,
+    "about": "The benefits of lunges include increasing your flexibility, stability, and strength. They can also reduce your chances of injury throughout your day and while exercising. Proper form while doing lunges is essential.\r\n",
+    "time": 29,
+    "exerciseMaterial": "Barbells "
+  },
+  {
+    "_id": "63347b77ee90b7eba7ba81d0",
+    "picture": "https://media.istockphoto.com/photos/health-club-leg-press-machine-picture-id173760253?s=612x612",
+    "age": 25,
+    "about": "The leg press, a type of resistance training exercise, is an excellent way to strengthen your legs. It's done by pushing your legs against weights on a leg press machine. Like all strength training exercises, leg presses build muscle, reduce the risk of injury, and counteract age-related muscle loss.\r\n",
+    "time": 34,
+    "exerciseMaterial": "Leg press machine"
+  },
+  {
+    "_id": "63347b7767faef5c81365418",
+    "picture": "https://st2.depositphotos.com/2389277/10948/i/600/depositphotos_109482988-stock-photo-working-out-with-ab-roller.jpg",
+    "age": 23,
+    "about": "The ab roller is an excellent exercise for working the upper body musculature too, including the erector spinae, the stabilizing muscles running the length of your spine, the latissimus dorsi (or lats), the broadest muscles on each side of your back, and your deltoids (shoulders), chest, biceps and triceps.\r\n",
+    "time": 26,
+    "exerciseMaterial": "Abdominal roller"
+  },
+  {
+    "_id": "63347b77fa672bec2f4b7c4f",
+    "picture": "https://media.istockphoto.com/photos/mature-man-exercising-in-the-gym-by-pulling-the-sling-for-upperback-picture-id1391003022?s=612x612",
+    "age": 20,
+    "about": "Stabilizing muscles come into play in the shoulder and upper back—namely, the anterior deltoid, trapezius, and levator scapulae. Wrist flexors are used as well. Biceps cable curls are effective at boosting biceps brachii strength and size.\r\n",
+    "time": 26,
+    "exerciseMaterial": "Cable biceps bar"
+  }
+]
