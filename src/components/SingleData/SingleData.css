@@ -6,13 +6,3 @@
   margin-bottom: 0;
 }
 
-.right__side {
-  background: #fff;
-}
-
-
-@media screen and (max-width:768px) {
-    .left__side {
-        margin: auto;
-    }
-}

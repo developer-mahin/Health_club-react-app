@@ -21,7 +21,8 @@ const Home = () => {
             <Nav></Nav>
             <h4>Age Select today’s exercise</h4>
             <div className='row ms-0'>
-                <div className="left__side col-md-8 row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 mt-0 bg-secondary bg-opacity-10">
+                <div className="left__side col-md-8 row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 mt-0">
+
                     {
                         gymdatas.map(data => <SingleData
                             data={data}
@@ -29,7 +30,7 @@ const Home = () => {
                         ></SingleData>)
                     }
                 </div>
-                <div className="right__side col-md-4 ms-0 ms-md-4">
+                <div className="right__side col-md-4 bg-white ms-0 ms-md-4">
                     <RightContainer></RightContainer>
                 </div>
             </div>
