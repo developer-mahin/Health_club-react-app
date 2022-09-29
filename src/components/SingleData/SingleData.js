@@ -3,13 +3,23 @@ import './SingleData.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
-const SingleData = ({ data }) => {
+const SingleData = ({ data, seconds, setSeconds }) => {
     const { exerciseMaterial, about, picture, age, time } = data;
-    console.log(data)
+
+
+    const handleAddSecond = () => {
+
+        const info = {
+            time,
+        }
+        const newData = ([info])
+        setSeconds(newData)
+    }
+// console.log(seconds);
 
     return (
         <div>
-            
+
             <div className=''>
                 <div className="col">
                     <div className="card data__info__card shadow">
@@ -19,7 +29,10 @@ const SingleData = ({ data }) => {
                             <p className="card-text text-secondary">{about ? about.slice(0, 70) + "..." : "data not found"}</p>
                             <p className='age'>For age: <span className='fw-semibold'>{age}-25</span></p>
                             <p>Time required : <span className='fw-semibold'>{time}s</span> </p>
-                            <button className='btn btn-primary w-100'>Add to list <FontAwesomeIcon icon={faPlus} /></button>
+                            <button
+                                onClick={handleAddSecond}
+                                className='btn btn-primary w-100'>Add to list <FontAwesomeIcon icon={faPlus}
+                                /></button>
                         </div>
                     </div>
                 </div>

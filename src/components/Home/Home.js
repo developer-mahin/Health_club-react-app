@@ -9,6 +9,7 @@ import Footer from '../Footer/Footer';
 
 const Home = () => {
     const [gymdatas, setGymdata] = useState([])
+    const [seconds, setSeconds] = useState([])
 
     useEffect(() => {
 
@@ -29,11 +30,19 @@ const Home = () => {
                         gymdatas.map(data => <SingleData
                             data={data}
                             key={data._id}
+                            second={seconds}
+                            setSeconds={setSeconds}
                         ></SingleData>)
                     }
                 </div>
                 <div className="right__side col-md-4 bg-white ms-0 ms-md-4 p-3 rounded">
-                    <RightContainer></RightContainer>
+
+                    {
+                        seconds.map(second => <RightContainer
+                            second={second}
+                        ></RightContainer>)
+                    }
+
                 </div>
             </div>
             <div className='mt-4'>
