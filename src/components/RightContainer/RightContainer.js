@@ -6,6 +6,7 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2'
 
 const RightContainer = ({ seconds, setAddBreak, addBreak }) => {
+    
 
     const handleActivity = () => {
         Swal.fire(
@@ -13,6 +14,11 @@ const RightContainer = ({ seconds, setAddBreak, addBreak }) => {
             'You are done with your activity!',
             'success'
         )
+    }
+
+    let totalTime = 0;
+    for(const times of seconds) {
+        totalTime = totalTime + times.time
     }
 
     return (
@@ -90,13 +96,8 @@ const RightContainer = ({ seconds, setAddBreak, addBreak }) => {
                 <div className='border rounded bg-secondary bg-opacity-25 p-3 my-md-3 my-2 d-flex align-items-center justify-content-between'>
 
 
-                    <h6>Exercise time </h6> <span className='fw-normal ms-5 text-secondary'>
-
-                        {
-                            seconds.map(second => <span key={second._id}>{second.time} </span>)
-                        }
-
-                        second</span>
+                    <h6>Exercise time </h6> <span className='fw-normal ms-5 text-secondary'> {totalTime} second</span>
+                    
                 </div>
                 <div className='border rounded bg-secondary bg-opacity-25 p-3 my-md-3 my-2 d-flex align-items-center justify-content-between'>
                     <h6>Break time </h6>

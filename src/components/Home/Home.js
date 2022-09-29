@@ -9,7 +9,6 @@ import Datas from '../Datas/Datas';
 
 const Home = () => {
     const [gymdatas, setGymdata] = useState([])
-    const [seconds, setSeconds] = useState([])
 
     useEffect(() => {
 
@@ -27,6 +26,18 @@ const Home = () => {
         setAddBreak(storeData)
     }, [])
 
+    const [seconds, setSeconds] = useState([])
+    const handleAddSecond = (time) => {
+        if(seconds.length){
+            const newData = [...seconds, time];
+            setSeconds(newData);
+        }
+        else{
+            setSeconds([time])
+        }
+    }
+
+
 
     return (
         <div className='home__container'>
@@ -38,6 +49,7 @@ const Home = () => {
                         gymdatas={gymdatas}
                         seconds={seconds}
                         setSeconds={setSeconds}
+                        handleAddSecond={handleAddSecond}
                     ></Datas>
                 </div>
                 <div className="right__side col-md-4 bg-white p-3 rounded">

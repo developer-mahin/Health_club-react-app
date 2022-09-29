@@ -4,22 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 
-const SingleData = ({ data, seconds, setSeconds }) => {
+const SingleData = ({ data, handleAddSecond }) => {
     const { exerciseMaterial, about, picture, age, time, _id } = data;
-
-    const handleAddSecond = () => {
-        const info = {
-            _id,
-            exerciseMaterial,
-            about,
-            picture,
-            age,
-            time
-        };
-        const newInfo = [info]
-        setSeconds(newInfo)
-    }
-
+    
     return (
         <div className=''>
             <div className="col">
@@ -32,7 +19,7 @@ const SingleData = ({ data, seconds, setSeconds }) => {
                         <p>Time required : <span className='fw-semibold'>{time}s</span> </p>
 
                         <button
-                            onClick={() => handleAddSecond()}
+                            onClick={() => handleAddSecond(data)}
                             className='btn btn-primary w-100'>Add to list <FontAwesomeIcon icon={faPlus}
                             /></button>
                     </div>
