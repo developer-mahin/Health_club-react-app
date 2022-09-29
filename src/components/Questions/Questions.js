@@ -36,7 +36,7 @@ const Questions = () => {
                         </button>
                     </h2>
                     <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
+                        <div className="accordion-body">
                             <p>The useEffect Hook allows you to perform side effects in your components. Some side effects include fetching data, directly updating the DOM, and set timers.</p>
                         </div>
                     </div>

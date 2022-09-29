@@ -9,7 +9,7 @@ const Datas = ({ gymdatas, seconds, setSeconds }) => {
                 gymdatas.map(data =>
                     <SingleData
                         data={data}
-                        key={data.id}
+                        key={data._id}
                         seconds={seconds}
                         setSeconds={setSeconds}
                     ></SingleData>)

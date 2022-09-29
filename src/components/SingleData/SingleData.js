@@ -5,10 +5,11 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 
 const SingleData = ({ data, seconds, setSeconds }) => {
-    const { exerciseMaterial, about, picture, age, time } = data;
+    const { exerciseMaterial, about, picture, age, time, _id } = data;
 
     const handleAddSecond = () => {
         const info = {
+            _id,
             exerciseMaterial,
             about,
             picture,
