@@ -6,17 +6,10 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2'
 
 const RightContainer = ({ seconds, setAddBreak, addBreak }) => {
-    // console.log(setAddBreak)
-    // const [breakTime, setBreakTime] = useState([])
-
-    // const handleBreakTime = (event) => {
-    //     setBreakTime(event)
-    // }
-
     const handleActivity = () => {
         Swal.fire(
             'Good job!',
-            'You clicked the button!',
+            'You are done with your activity!',
             'success'
         )
     }

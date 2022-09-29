@@ -15,12 +15,6 @@ const SingleData = ({ data, seconds, setSeconds }) => {
             age,
             time
         };
-        // let newTotal = 1;
-        // for(const activity of seconds){
-        //     console.log(activity.time);
-        //     const total = activity.time + newTotal;
-        //     return total;
-        // }
         const newInfo = [info]
         setSeconds(newInfo)
     }
