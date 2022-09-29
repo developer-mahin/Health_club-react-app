@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import RightContainer from '../RightContainer/RightContainer';
-import SingleData from '../SingleData/SingleData';
 import Nav from '../Nav/Nav';
 import './Home.css'
 import Questions from '../Questions/Questions';
 import Footer from '../Footer/Footer';
+import Datas from '../Datas/Datas';
 
 
 const Home = () => {
@@ -19,30 +19,29 @@ const Home = () => {
 
     }, [])
 
+
+    const [addBreak, setAddBreak] = useState([])
+
+    useEffect(() => {
+        const storeData = JSON.parse(localStorage.getItem("addTime"))
+        setAddBreak(storeData)
+    }, [])
+
+
     return (
         <div className='home__container'>
             <Nav></Nav>
             <h4>Age Select today’s exercise</h4>
             <div className='row ms-0'>
-                <div className="left__side col-md-8 row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 mt-0">
-
-                    {
-                        gymdatas.map(data => <SingleData
-                            data={data}
-                            key={data._id}
-                            second={seconds}
-                            setSeconds={setSeconds}
-                        ></SingleData>)
-                    }
+                <div className="left__side col-md-8 mt-0">
+                    <Datas
+                        gymdatas={gymdatas}
+                        seconds={seconds}
+                        setSeconds={setSeconds}
+                    ></Datas>
                 </div>
-                <div className="right__side col-md-4 bg-white ms-0 ms-md-4 p-3 rounded">
-
-                    {
-                        seconds.map(second => <RightContainer
-                            second={second}
-                        ></RightContainer>)
-                    }
-
+                <div className="right__side col-md-4 bg-white p-3 rounded">
+                    <RightContainer seconds={seconds} setAddBreak={setAddBreak} addBreak={addBreak}></RightContainer>
                 </div>
             </div>
             <div className='mt-4'>

@@ -1,11 +1,17 @@
-import React from 'react';
+// import React, { useState } from 'react';
 import './RightContainer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2'
 
-const RightContainer = ({second}) => {
+const RightContainer = ({ seconds, setAddBreak, addBreak }) => {
+    // console.log(setAddBreak)
+    // const [breakTime, setBreakTime] = useState([])
+
+    // const handleBreakTime = (event) => {
+    //     setBreakTime(event)
+    // }
 
     const handleActivity = () => {
         Swal.fire(
@@ -16,6 +22,7 @@ const RightContainer = ({second}) => {
     }
 
     return (
+
         <div>
             <div className='d-flex align-items-center gap-3'>
                 <div >
@@ -60,21 +67,46 @@ const RightContainer = ({second}) => {
             <div className='border rounded shadow p-3 mt-2'>
                 <h5 className='text-center'>Add a Break</h5>
                 <div className='text-center my-1'>
-                    <button className='btn btn-primary rounded-circle me-1 p-2'>10s</button>
-                    <button className='btn btn-primary rounded-circle me-1 p-2'>20s</button>
-                    <button className='btn btn-primary rounded-circle me-1 p-2'>30s</button>
-                    <button className='btn btn-primary rounded-circle me-1 p-2'>40s</button>
-                    <button className='btn btn-primary rounded-circle me-1 p-2'>50s</button>
+
+
+                    <button onClick={(e) => {
+                        setAddBreak((e.target.innerText).slice(0, 2))
+                        localStorage.setItem('addTime', JSON.stringify((e.target.innerText).slice(0, 2)))
+                    }} className='btn btn-primary rounded-circle me-1 p-2'>10s</button>
+                    <button onClick={(e) => {
+                        setAddBreak((e.target.innerText).slice(0, 2))
+                        localStorage.setItem('addTime', JSON.stringify((e.target.innerText).slice(0, 2)))
+                    }} className='btn btn-primary rounded-circle me-1 p-2'>20s</button>
+                    <button onClick={(e) => {
+                        setAddBreak((e.target.innerText).slice(0, 2))
+                        localStorage.setItem('addTime', JSON.stringify((e.target.innerText).slice(0, 2)))
+                    }} className='btn btn-primary rounded-circle me-1 p-2'>30s</button>
+                    <button onClick={(e) => {
+                        setAddBreak((e.target.innerText).slice(0, 2))
+                        localStorage.setItem('addTime', JSON.stringify((e.target.innerText).slice(0, 2)))
+                    }} className='btn btn-primary rounded-circle me-1 p-2'>40s</button>
+                    <button onClick={(e) => {
+                        setAddBreak((e.target.innerText).slice(0, 2))
+                        localStorage.setItem('addTime', JSON.stringify((e.target.innerText).slice(0, 2)))
+                    }} className='btn btn-primary rounded-circle me-1 p-2'>50s</button>
                 </div>
             </div>
             <div className='border rounded shadow mt-md-5 mt-2 p-3'>
                 <h5>Exercise Details</h5>
                 <div className='border rounded bg-secondary bg-opacity-25 p-3 my-md-3 my-2 d-flex align-items-center justify-content-between'>
-                    <h6>Exercise time </h6> <span className='fw-normal ms-5 text-secondary'>{second.time} second</span>
+
+
+                    <h6>Exercise time </h6> <span className='fw-normal ms-5 text-secondary'>
+
+                        {
+                            seconds.map(second => <span>{second.time} </span>)
+                        }
+
+                        second</span>
                 </div>
                 <div className='border rounded bg-secondary bg-opacity-25 p-3 my-md-3 my-2 d-flex align-items-center justify-content-between'>
                     <h6>Break time </h6>
-                    <span className='fw-normal ms-5 text-secondary'>second</span>
+                    <span className='fw-normal ms-5 text-secondary'>{addBreak} second</span>
                 </div>
             </div>
             <div className='mt-md-5 mt-3'>

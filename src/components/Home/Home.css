@@ -11,10 +11,4 @@
   .left__side {
     margin: auto;
   }
-
-  .right__side{
-    width: 100%;
-    margin-left: 0px !important;
-    margin-top: 30px;
-  }
 }
